@@ -78,3 +78,16 @@ string listNodeToString(ListNode* node) {
     return "[" + result.substr(0, result.length() - 2) + "]";
 }
 
+void prettyPrintLinkedList(ListNode* node) {
+    while (node && node->next) {
+        cout << node->val << "->";
+        node = node->next;
+    }
+
+    if (node) {
+        cout << node->val << endl;
+    } else {
+        cout << "Empty LinkedList" << endl;
+    }
+}
+

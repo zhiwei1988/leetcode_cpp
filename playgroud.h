@@ -39,5 +39,6 @@ string integerVectorToString(vector<int> list, int length = -1);
 vector<int> stringToIntegerVector(string input);
 ListNode* stringToListNode(string input);
 string listNodeToString(ListNode* node);
+void prettyPrintLinkedList(ListNode* node);
 
 #endif //LEETCODE_PLAYGROUD_H
