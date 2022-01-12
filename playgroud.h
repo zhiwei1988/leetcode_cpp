@@ -16,6 +16,7 @@
 #include <deque>
 #include <map>
 #include <algorithm>
+#include <limits.h>
 
 using namespace std;
 
