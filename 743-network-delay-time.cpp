@@ -4,7 +4,7 @@
 
 #include "playgroud.h"
 
-class Solution {
+class Solution { // Dijkstra 解法
 public:
     int networkDelayTime(vector<vector<int>>& times, int n, int k) {
         vector<vector<TimeInfo>> adjs(n+1);
@@ -67,6 +67,37 @@ public:
         int id;
         int time; // 存储起始顶点到当前顶点的耗时
     };
+};
+
+class Solution2 { // Floyd 解法
+public:
+    int networkDelayTime(vector<vector<int>>& times, int n, int k) {
+        vector<vector<long>> dist(n+1, vector<long>(n+1, INT_MAX));
+        for (auto &time : times) {
+            dist[time[0]][time[1]] = time[2];
+        }
+
+        for (int i = 1; i <= n; i++) {
+            dist[i][i] = 0;
+        }
+
+        for (int z = 1; z <= n; z++) {
+            for (int i = 1; i <= n; i++) {
+                for (int j = 1; j <= n; j++) {
+                    if (dist[i][j] > dist[i][z] + dist[z][j]) {
+                        dist[i][j] = dist[i][z] + dist[z][j];
+                    }
+                }
+            }
+        }
+
+        long res = INT_MIN;
+        for (int i = 1; i <= n; i++) {
+            res = max(res, dist[k][i]);
+        }
+
+        return res == INT_MAX ? -1 : res;
+    }
 };
 
 int main()
