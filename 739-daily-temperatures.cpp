@@ -2,7 +2,7 @@
 // Created by zhiwei on 1/13/2022.
 //
 
-#include "playgroud.h"
+#include "playground.h"
 
 class Solution {
 public:

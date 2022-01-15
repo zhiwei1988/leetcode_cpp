@@ -2,7 +2,7 @@
 // Created by ZhiWei Tan on 9/17/21.
 //
 
-#include "playgroud.h"
+#include "playground.h"
 
 void trimLeftTrailingSpaces(string &input) {
     input.erase(input.begin(), find_if(input.begin(), input.end(), [](int ch) {

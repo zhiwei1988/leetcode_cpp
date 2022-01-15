@@ -2,8 +2,8 @@
 // Created by ZhiWei Tan on 9/17/21.
 //
 
-#ifndef LEETCODE_PLAYGROUD_H
-#define LEETCODE_PLAYGROUD_H
+#ifndef LEETCODE_PLAYGROUND_H
+#define LEETCODE_PLAYGROUND_H
 
 #include <iostream>
 #include <sstream>
@@ -42,4 +42,4 @@ ListNode* stringToListNode(string input);
 string listNodeToString(ListNode* node);
 void prettyPrintLinkedList(ListNode* node);
 
-#endif //LEETCODE_PLAYGROUD_H
+#endif //LEETCODE_PLAYGROUND_H
